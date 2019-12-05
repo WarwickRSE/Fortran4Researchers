@@ -1,6 +1,8 @@
 
 PROGRAM main
 
+  IMPLICIT NONE
+
   ! Number of items in the list (fixed)
   INTEGER, PARAMETER :: n = 10000
   ! I use a compile-time fixed array here. Could also use an ALLOCATABLE
@@ -41,7 +43,8 @@ PROGRAM main
     sorted = .NOT. swapped
   END DO
 
-  ! Print the sorted data
-  PRINT*, dat
+  ! Print first and last elements. This just verifies we're no longer reversed
+
+  PRINT*, "First and last elements of dat are :", dat(1), dat(n)
 
 END PROGRAM
