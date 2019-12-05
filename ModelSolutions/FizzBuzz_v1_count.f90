@@ -1,7 +1,8 @@
 PROGRAM FIZZBUZZ
 
+  IMPLICIT NONE
+
   INTEGER :: i, max_num, i3, i5
-  CHARACTER(LEN=8) :: output  ! 8 characters can hold up to 10 million
 
   max_num = 100  ! Classic FizzBuzz runs from 1 to 100
 

@@ -1,5 +1,7 @@
 PROGRAM FIZZBUZZ
 
+  IMPLICIT NONE
+
   INTEGER :: i, max_num
 
   max_num = 100  ! Classic FizzBuzz runs from 1 to 100

@@ -3,7 +3,7 @@ PROGRAM main
 
   IMPLICIT NONE
 
-  REAL :: radius, area
+  REAL :: radius
 
 
   PRINT*, "Enter radius of circle and press Enter"

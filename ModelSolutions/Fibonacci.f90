@@ -1,6 +1,8 @@
 
 PROGRAM MAIN
 
+  IMPLICIT NONE
+
   ! Loop counter and maximum value
   INTEGER :: i, max_val
   ! Variables for previous sequence vals, and current one

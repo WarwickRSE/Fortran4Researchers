@@ -1,7 +1,8 @@
 PROGRAM main
 
+  IMPLICIT NONE
 
-  REAL :: val, sd1, sd2, av, scale_fac
+  REAL :: sd1, sd2, av, scale_fac
   REAL :: x_min, x_max, dx, x
   REAL :: sum_of_diffs, sum_of_vals, sum_of_sqs
   REAL :: offset

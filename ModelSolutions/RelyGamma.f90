@@ -4,7 +4,7 @@ PROGRAM main
   IMPLICIT NONE
 
   REAL :: v
-  REAL, PARAMETER :: c = 299792458 ! m/s
+  REAL, PARAMETER :: c = 299792458.0 ! m/s
   REAL :: beta, gamma
 
   PRINT*, "Enter velocity in m/s "

@@ -1,5 +1,7 @@
 PROGRAM FIZZBUZZ
 
+  IMPLICIT NONE
+
   INTEGER :: i, max_num
   CHARACTER(LEN=8) :: output  ! 8 characters can hold up to 10 million
 
