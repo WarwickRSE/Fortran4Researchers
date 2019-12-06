@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ "$#" -lt 1 ]; then
+  echo "Supply name of file to compile"
+else
+  filename="$1"
+fi
+
+#Name of compiled file -use filename
+outfile=${filename%.*}
+echo $outfile
+#Name of compiler
+fc=gfortran
+cflags="-g -std=f2003 -Wall"
+
+extra_mods="kinds.f90 random_mod.f90 command_line.f90 ascii_display.f90 sleep_mod.f90"
+
+#Actual compile line. Other flags etc can be added
+$fc $cflags $extra_mods $filename -o $outfile
