@@ -14,8 +14,11 @@ MODULE numerical_rootfinder
   REAL(KIND=dbl), PARAMETER :: a=-0.31428571428_dbl, b=-0.21549295774_dbl, c=0.20845070422_dbl
   ! We can use the KIND as a "wart" to get literals of the type we want
 
-
-  ! Our function is always going to take exactly ONE argument
+  ! Define the "signature" of our function. "Abstract" means that
+  ! this is not defining an interface for a function we've got elsewhere
+  ! it is the abstract idea of "any function that looks like this"
+  ! Our function is always going to take exactly ONE argument, type dbl
+  ! and return a double also. I also add intents
   ABSTRACT INTERFACE
       FUNCTION op (x)
          IMPORT dbl
@@ -24,8 +27,14 @@ MODULE numerical_rootfinder
       END FUNCTION op
   END INTERFACE
 
-  !Use a type to hold the function pointer so we can have an array of them
+
   TYPE func
+    ! We defined the interface (arguments, return type etc) "op" above
+    ! Now we can have a pointer to an unknown function with the same interface
+    ! Fortran required this "nopass" attirbute because a Procedure in a Type is
+    ! interpreted as a Member function and it is assumed the type itself will be
+    ! the first argument (c.f this, self, etc). Nopass means "do not pass the type as
+    ! first argument"
     PROCEDURE (op), pointer, nopass :: f, f_prime
   END TYPE func
 
@@ -37,6 +46,7 @@ MODULE numerical_rootfinder
   ! explicitly. If I wanted to be super fancy, I might create a function-to-create-a_function
   ! so I can bind whatever coeffcients I wish or use another type, or myriad
   ! other options. Here I use hard-coded cubics
+  ! I would probably want these to be in another module in real code
   FUNCTION sample_cubic(x)
 
     REAL(KIND=dbl), INTENT(IN) :: x
