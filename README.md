@@ -22,7 +22,7 @@ after the input file. These are:
 * GameOfLife.f90
 * IsingSpin.f90
 * LinkedList.f90
-
+* LinkedList\_OO.f90
 
 The basic examples, in the order they come in the pdf/exercises are:
 
@@ -92,8 +92,9 @@ the solutions, to demonstrate more bits of Fortran.
 * IsingSpin - the Ising model for Magnetism (see instructions for details)
 * LinkedList - a toy version of a code using a linked-list data structure
     * Linked lists are handy when things are added and removed a lot
+    * They're also handy when you want to be able to loop over things separately OR combined
     * See ExamplePointer.f90 for an illustration of how pointers work in Fortran
-
+* LinkedList\_OO - the same as the Linked List, but using Class member functions for more modularity
 
 ## Helper Code
 
