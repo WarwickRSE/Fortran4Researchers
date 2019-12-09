@@ -104,5 +104,7 @@ codes to make these things smoother. In particular we have:
 
 * kinds.f90 - Supplies the basic numeric KINDs
 * random\_mod.f90 - Wraps Fortran's built-in random number generator, but handles seeding for you
-
+* sleep\_mod.f90 - Wraps the C/Gnu sleep functions to get millisecond resolution for nice display
+* ascii\_display.f90 - Ascii-art display of arrays
+* command\_line.f90 - Handle command line arguments. Also illustrates a useful overloaded-interface
 
