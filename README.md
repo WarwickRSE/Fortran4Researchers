@@ -91,5 +91,13 @@ the solutions, to demonstrate more bits of Fortran.
     * ???? - 
 * IsingSpin - the Ising model for Magnetism
 
+## Helper Code
+
+Some of the "real" programs become a lot more interesting once we have the ability to do
+random numbers, display the results, and control them at runtime. We include some helper
+codes to make these things smoother. In particular we have:
+
+* kinds.f90 - Supplies the basic numeric KINDs
+* random\_mod.f90 - Wraps Fortran's built-in random number generator, but handles seeding for you
 
 
