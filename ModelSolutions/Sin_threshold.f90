@@ -7,7 +7,7 @@ PROGRAM MAIN
   REAL :: term, sin_approx, x, last_approx
   REAL :: threshold
 
-  x = 3.14159/ 3.0 ! Pi/16
+  x = 3.14159/ 3.0 ! Pi/3
 
   threshold = 0.1/100.0 !0.1%
 

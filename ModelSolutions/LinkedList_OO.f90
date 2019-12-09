@@ -26,7 +26,7 @@ MODULE doubly_linked_list
   TYPE dl_list
     !> head and tail are created and nullified
     !> These will be set any time the type is created
-    TYPE(particle, POINTER :: head=>NULL(), tail=>NULL()
+    TYPE(particle), POINTER :: head=>NULL(), tail=>NULL()
     CONTAINS
     PROCEDURE :: add_at_end
     PROCEDURE :: remove_item

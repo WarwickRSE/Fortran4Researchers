@@ -13,7 +13,7 @@ PROGRAM main
   ! Using a variable for this is clearer, and slightly more efficient
   scale_fac = 2.0 * 3.14159
   ! I use a variable here too for clarity and ease of changing
-  offset = 1000.0
+  offset = 0.0
 
 
   ! We can make the x-axis several ways.
