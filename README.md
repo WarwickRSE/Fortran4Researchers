@@ -89,7 +89,11 @@ the solutions, to demonstrate more bits of Fortran.
 * GameOfLife - Conway's game of Life
     * GameOfLife.f90 - the basic solution using allocatable arrays and the helper code modules
     * ???? - 
-* IsingSpin - the Ising model for Magnetism
+* IsingSpin - the Ising model for Magnetism (see instructions for details)
+* LinkedList - a toy version of a code using a linked-list data structure
+    * Linked lists are handy when things are added and removed a lot
+    * See ExamplePointer.f90 for an illustration of how pointers work in Fortran
+
 
 ## Helper Code
 
