@@ -16,7 +16,7 @@ to approach the problem, as "oracles" showing the correct results, or just as Fo
 look at. Reading, and understanding, code in a new language is a good way to get the hang of the
 harder parts.
 
-##Building the Examples
+## Building the Examples
 
 Most of the code examples build with a simple gfortran command, although we *strongly* recommend
 using -Wall to enable all warnings, and -std=f2003 to force adherence to the Fortran 2003 standard.
