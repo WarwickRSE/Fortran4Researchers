@@ -189,8 +189,6 @@ MODULE ising_functions
      ! For clarity of the rest of the code, use a temporary pointer
       test_element => this%elements(rand_x, rand_y)
 
-PRINT*, rand_x, rand_y, SIZE(test_element%neighbours), test_element%state
- 
       ! Calc energy change
       delta_E = 0.0
       ! Now we just sum over the neighbours, without worrying where they are
