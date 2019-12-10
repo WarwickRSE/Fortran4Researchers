@@ -123,4 +123,4 @@ codes to make these things smoother. In particular we have:
 * sleep\_mod.f90 - Wraps the C/Gnu sleep functions to get millisecond resolution for nice display
 * ascii\_display.f90 - Ascii-art display of arrays
 * command\_line.f90 - Handle command line arguments. Also illustrates a useful overloaded-interface
-
+    * command\_line\_snippet.f90 - Demo of using the command line code
