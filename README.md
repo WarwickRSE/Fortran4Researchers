@@ -62,6 +62,7 @@ This is a real classic "can you program language x" problem. I give 3 approaches
 
 * FizzBuzz\_v1\_mod.f90 - The obvious solution - MOD(x, 3) is the remainder when x is divided by 3
 * FizzBuzz\_v1\_count.f90 - A solution without MOD using a counter
+* FizzBuzz\_v1\_case.f90 - A solution using a CASE statement which works well 3 and 5, but requires a lot of typing if the lowest common multiple is large
 * FizzBuzz\_v2.f90 - A "more elegant" solution which aligns all the outputs and handles 15 without a special case
 
 Note that all of these can be modified to change 3 and 5 to other co-prime numbers, although we would need to make them into parameters as well.
