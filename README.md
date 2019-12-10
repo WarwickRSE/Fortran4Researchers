@@ -3,28 +3,41 @@
 These are the code files and example sheets for Warwick RSEs "Fortran for Researchers"
 one-day workshop.
 
-The Example codes referred to in the slides are in the ExampleCode directory, and the slides are in the Slides directory.
+The code from the slides is all in the FromSlides directory, and the slides are in the Slides directory.
+We suggest using these to recap syntax, and you might wish to borrow from them for the examples session.
 
-
-For the second part of the afternoon, we provide a series of suggestions for simple programs, from
+The examples session is in the second part of the afternoon, and is a chance to actually use Fortran.
+We provide a series of suggestions for simple programs, from
 the very basic through to some real codes. A pdf describing the suggestions is in the main directory.
 We also provide "model solutions" for all of the suggestions. Note that these are just ONE way of
-solving the problem, not necessarily the only one or the optimal one. Use them for suggestions how
-to approach the problem, or as "oracles" showing the correct results.
+solving the problem, not necessarily the only one or the optimal one. In some cases the model solution
+is deliberately overbuilt to demonstrate some part of Fortran. Use the Models for suggestions how
+to approach the problem, as "oracles" showing the correct results, or just as Fortran code to
+look at. Reading, and understanding, code in a new language is a good way to get the hang of the
+harder parts.
 
+##Building the Examples
 
+Most of the code examples build with a simple gfortran command, although we *strongly* recommend
+using -Wall to enable all warnings, and -std=f2003 to force adherence to the Fortran 2003 standard.
+A simple build script is provided to build using these. The command "./build <name of f90 file>"
+will build an executable with the same name as the input file (minus the .f90 part).
 
-The Model solutions come with simple build scripts. Most of the programs use "./build <name of f90 file>
-and this will build an executable with the same name as the input file (minus the .f90 part). Some of the
-programs need extra support code - these use build\_w\_mods and also produce an executable named
-after the input file. These are:
+A few of the examples have a more complicated build. In the FromSlides, the following need the F2008
+standard, so use the "build2008" script instead. These are:
+* 43-KindsF2008.f90
+
+Some of the model programs need extra support code -
+these use build\_w\_mods to include the helper modules supplied and described below. These are:
 
 * GameOfLife.f90
 * IsingSpin.f90
+* IsingSpin\_OO.f90
 * LinkedList.f90
 * LinkedList\_OO.f90
 
-The basic examples, in the order they come in the pdf/exercises are:
+The following sections describe the programs created in the exercises and available
+as model codes.
 
 ## Basic examples
 These follow the steps in the exercises closely:
@@ -88,13 +101,15 @@ the solutions, to demonstrate more bits of Fortran.
     * Numerical\_Root\_ptr.f90 - part of a general solution - the test function can be swapped to anything we like, but this still uses a simple hard-coded cubic
 * GameOfLife - Conway's game of Life
     * GameOfLife.f90 - the basic solution using allocatable arrays and the helper code modules
-    * ???? - 
 * IsingSpin - the Ising model for Magnetism (see instructions for details)
-* LinkedList - a toy version of a code using a linked-list data structure
+    * IsingSpin.f90 - the basic version of the Ising model
+    * IsingSpin\_OO.f90 - an Object-Oriented version of the Ising model. *WARNING* - overbuilt for this problem.
+* LinkedList - a toy physics problem using a Linked List data structure
     * Linked lists are handy when things are added and removed a lot
     * They're also handy when you want to be able to loop over things separately OR combined
     * See ExamplePointer.f90 for an illustration of how pointers work in Fortran
-* LinkedList\_OO - the same as the Linked List, but using Class member functions for more modularity
+    * LinkedList.f90 - the basic linked list code
+    * LinkedList\_OO.f90 - the same as the Linked List, but using Class member functions for more modularity
 
 ## Helper Code
 
