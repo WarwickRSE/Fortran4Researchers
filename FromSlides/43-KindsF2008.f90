@@ -3,7 +3,7 @@ PROGRAM kinds
   !Don't have to USE, INTRINSIC, can just USE but INTRINSIC
   !means that the compiler won't try to use one of your
   !modules
-  USE ISO_FORTRAN_ENV
+  USE, INTRINSIC :: ISO_FORTRAN_ENV
   IMPLICIT NONE
 
   INTEGER(INT8) :: i1
