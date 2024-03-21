@@ -1,12 +1,12 @@
 # Fortran4Researchers
 
 These are the code files and example sheets for Warwick RSEs "Fortran for Researchers"
-one-day workshop.
+workshop.
 
 The code from the slides is all in the FromSlides directory, and the slides are in the Slides directory.
 We suggest using these to recap syntax, and you might wish to borrow from them for the examples session.
 
-The examples session is in the second part of the afternoon, and is a chance to actually use Fortran.
+The examples session is a chance to actually use Fortran.
 We provide a series of suggestions for simple programs, from
 the very basic through to some real codes. A pdf describing the suggestions is in the main directory.
 We also provide "model solutions" for all of the suggestions. Note that these are just ONE way of
